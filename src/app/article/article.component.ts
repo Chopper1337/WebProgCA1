@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { NumberValueAccessor } from '@angular/forms';
 import { article } from './article.model';
 
@@ -8,8 +8,7 @@ import { article } from './article.model';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-  
-  article:article;
+  @Input() article:article;
 
   constructor() {
     this.article=new article("Angular", "https://angular.io", 5);
