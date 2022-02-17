@@ -7,7 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   addArticle(title:HTMLInputElement, link:HTMLInputElement):Boolean{
-    console.log('Adding article and adding link')
+    console.log(`${title.value} ${link.value}`)
     return false;
   }
 }
