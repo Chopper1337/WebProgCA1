@@ -24,4 +24,8 @@ export class AppComponent {
     console.log(`${title.value} ${link.value}`)
     return false;
   }
+  
+  sortedArticles(): article[]{
+    return this.articles.sort((a:article, b: article) => b.votes - a.votes);
+  }
 }
