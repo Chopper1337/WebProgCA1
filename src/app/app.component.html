@@ -1,0 +1,14 @@
+<form>
+  <fieldset class="form-group">
+    <legend>Add a link</legend>
+    <div class="form-group">
+      <label for="title">Title</label>
+      <input name="title" class="forum-control" #newTitle placeholder="Enter link title">
+    </div>
+    <div class="form-group">
+  <label for="link">Link</label>
+  <input name="link" class="form-control" #newLink placeholder="Enter URL">
+    </div>
+  <button (click)="addArticle(newTitle, newLink)">Submit Link</button>
+  </fieldset>
+</form>
