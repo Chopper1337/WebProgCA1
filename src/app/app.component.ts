@@ -8,19 +8,19 @@ import { article } from './article/article.model';
 })
 export class AppComponent {
 
-  articles:article[];
+  articles: article[];
 
-  constructor(){
-    this.articles=[
+  constructor() {
+    this.articles = [
       new article('Angular', 'https://angular.io', 5),
       new article('Google', 'https://google.ie', 5),
       new article('TikTok', 'https://tiktok.com', 5)
     ];
   }
-  addArticle(title:HTMLInputElement, link:HTMLInputElement):Boolean{
+  addArticle(title: HTMLInputElement, link: HTMLInputElement): Boolean {
     this.articles.push(new article(title.value, link.value, 0))
-    title.value=""
-    link.value=""
+    title.value = ""
+    link.value = ""
     console.log(`${title.value} ${link.value}`)
     return false;
   }

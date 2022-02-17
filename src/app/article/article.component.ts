@@ -8,21 +8,21 @@ import { article } from './article.model';
   styleUrls: ['./article.component.css']
 })
 export class ArticleComponent implements OnInit {
-  @Input() article:article;
+  @Input() article: article;
 
   constructor() {
-    this.article=new article("Angular", "https://angular.io", 5);
+    this.article = new article("Angular", "https://angular.io", 5);
   }
-  
+
   ngOnInit(): void {
   }
 
-  voteUp():Boolean {
+  voteUp(): Boolean {
     this.article.voteUp();
     return false;
   }
 
-  voteDown():Boolean {
+  voteDown(): Boolean {
     this.article.voteDown();
     return false;
   }
